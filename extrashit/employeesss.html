@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Employee Details</title>
+</head>
+<body>
+	<h4>Enter a new employee entry</h4>
+	<form method = "post">
+		Name <input type = "text" name = "name"><br>
+		Role/Position <input type = "text" name = "role"><br>
+		Date of joining <input type = "text" name = "date_of_joining"><br>
+		Salary <input type = "text" name = "salary"><br>
+		Current task assigned <input type = "text" name = "current_task"><br>
+		Percentage task completed <input type = "text" name = "percentage_task"><br>
+		
+		<input type = "submit">
+		
+		<br><br><br>
+		<h4>List of employees:</h4>
+		
+		{%for e in employee%}
+			{{e.name}}.........{{e.role}}..........{{e.date_of_joining}}.........{{e.salary}}........{{e.current_task}}  <br><br>
+		{%endfor%}
+	</form>
+</body>
+</html>

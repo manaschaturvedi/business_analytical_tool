@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>To-do list</title>
+</head>
+<body>
+	<form method = "post">
+		Task: <input type = "text" name = "todo">
+		<br>
+		<input type = "submit">
+	</form>
+	
+	<br><br>
+	<h3>Previous Notifications:</h3>
+	
+	{%for e in list%}
+		{{e.task}} <br>
+		Posted on: {{e.date}}  <br><br><br>
+	{%endfor%}
+</body>
+</html>
